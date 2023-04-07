@@ -1,0 +1,22 @@
+.carousel-container {
+    /* Style the container as needed */
+    width: 50%;
+    height: 100px;
+    /* overflow: hidden; */
+}
+
+.carousel-wrapper {
+    /* Style the wrapper as needed */
+    display: flex;
+    transition: scroll 0.5s ease-in-out;
+}
+
+.carousel-wrapper img {
+    /* Style the carousel items (e.g., images) as needed */
+    flex: 0 0 auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  /* Style the navigation buttons as needed */
+  /* ... */
