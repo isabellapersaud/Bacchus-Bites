@@ -23,7 +23,6 @@ def index():
 
 class Signup(Resource):
     def post(self):
-        request_json = request.get_json()
 
         username = request.get_json().get('username')
         password = request.get_json().get('password')
@@ -76,7 +75,6 @@ api.add_resource(CheckSession, '/check_session', endpoint='check_session')
 class Login(Resource):
     def post(self):
 
-        request_json = request.get_json()
 
         username = request.get_json()['username']
         password = request.get_json()['password']
@@ -175,7 +173,7 @@ class Ingredients(Resource):
 
         return response 
         
-api.add_resource(Ingredients, '/ingredients')
+api.add_resource(Ingredients, '/ingredients/')
 
 
 class Comments(Resource):
