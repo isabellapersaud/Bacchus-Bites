@@ -79,6 +79,7 @@ function Header({user, setUser, onLogout}) {
                 <Button variant="outline" onClick={handleLogout}>
                 Logout
                 </Button>
+                <ul>Welcome , {user.username} </ul>
             </Nav>
             <NavbarContainer>
                 <NavbarList>
