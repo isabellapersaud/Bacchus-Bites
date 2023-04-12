@@ -16,6 +16,7 @@ function About() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        window.alert("You have been added to the list!");
         setFirstName("");
         setLastName("");
         setEmail("");
@@ -24,7 +25,7 @@ function About() {
 
     return (
     <div>
-        <h2>HELLO</h2>
+        <h2>HELLO blah blah blah</h2>
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
             <div style={{ textAlign: "center", maxWidth: "400px", padding: "1rem", border: "1px solid #ccc", borderRadius: "4px" }}>
                 <h1>Want More Recipes?!</h1>

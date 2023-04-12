@@ -32,11 +32,19 @@ class User(db.Model, SerializerMixin):
             password.encode('utf-8')
         )
         self._password_hash = password_hash.decode('utf-8')
+
+    @validates('username')
+    def validate_username(self, key, username):
+        if len(username) < 5:
+            raise ValueError("Username must be at least 5 characters long")
+        return username
+
     
     def authenticate(self, password):
         return bcrypt.check_password_hash(
             self._password_hash, password.encode('utf-8')
         )
+
 
     def __repr__(self):
         return f"""<User {self.id}; Name: {self.username}.>"""
@@ -63,6 +71,7 @@ class Recipe(db.Model, SerializerMixin):
 
     id = db.Column(db.Integer, primary_key=True)
     image = db.Column(db.String)
+    likes = db.Column(db.Integer)
     title = db.Column(db.String)
     category = db.Column(db.String)
     description = db.Column(db.String)

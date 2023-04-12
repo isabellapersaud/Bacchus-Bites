@@ -87,7 +87,7 @@ function App() {
             <About />
           </Route> 
           <Route exact path="/recipes"> 
-            <RecipePage recipes = {filteredRecipes} />
+            <RecipePage recipes = {filteredRecipes}  />
           </Route>
           <Route exact path = "/recipes/:id">
             <RecipeDetailsPage  recipes = {recipes} />

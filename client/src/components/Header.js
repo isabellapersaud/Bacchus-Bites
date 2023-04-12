@@ -79,7 +79,7 @@ function Header({user, setUser, onLogout}) {
                 <Button variant="outline" onClick={handleLogout}>
                 Logout
                 </Button>
-                <ul>Welcome , {user.username} </ul>
+                <ul>Welcome Back, {user.username} </ul>
             </Nav>
             <NavbarContainer>
                 <NavbarList>
@@ -93,14 +93,7 @@ function Header({user, setUser, onLogout}) {
                     <NavLink to =  "/ingredients">Ingredients</NavLink>
                 </NavbarItem>
                 <NavbarItem>
-                    <NavLink  to = "/comments">Comments</NavLink>
-                </NavbarItem>
-                <NavbarItem>
                     <NavLink  to = "/about">About</NavLink>
-                </NavbarItem>
-                <NavbarItem>
-                    <NavLink  to = "/logout">LogOut
-                    </NavLink>
                 </NavbarItem>
                 </NavbarList>
             </NavbarContainer>
