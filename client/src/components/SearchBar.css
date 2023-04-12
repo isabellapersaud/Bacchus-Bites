@@ -1,0 +1,25 @@
+.search {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 25px;
+    padding: 5px 10px;
+    max-width: 200px;
+}
+
+.searchTerm {
+    flex: 1;
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.transparent {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+.grey {
+    color: grey !important;
+}

@@ -6,8 +6,7 @@ import { useHistory } from "react-router-dom";
 
 
 
-
-function NavBar( {user, onLogout} ) {
+function NavBar(user, onLogout) {
 
     function handleClick() {
         redirectHome()
@@ -30,7 +29,7 @@ function NavBar( {user, onLogout} ) {
     return (
         <Wrapper>
         <Logo>
-            <Link to="/">Bacchus Bites</Link>
+            <Link to="/">BACCHUS BITES</Link>
         </Logo>
         <Nav>
             <Button variant="outline" onClick={handleLogout}>
@@ -67,6 +66,7 @@ function NavBar( {user, onLogout} ) {
         );
     }
 
+
 const Wrapper = styled.header`
     display: flex;
     justify-content: center;
@@ -74,12 +74,14 @@ const Wrapper = styled.header`
     padding: 8px;
 `;
 
+
 const Logo = styled.h1`
-    font-family: "Permanent Marker", cursive;
+    font-family: "Noto Serif Japanese";
     font-size: 3rem;
-    color: deeppink;
-    margin: 0;
-    line-height: 1;
+    color: black;
+    letter-spacing: 0.5em;
+    margin: 8px 0 16px;
+
 
 a {
     color: inherit;

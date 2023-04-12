@@ -12,7 +12,7 @@ function Login( {onLogin} ) {
     return (
 
         <Wrapper>
-            <Logo>Bacchus Bites</Logo>
+            <Logo>BACCHUS BITES</Logo>
         {showLogin ? (
             <>
                 <LoginForm onLogin = {onLogin} />
@@ -39,9 +39,10 @@ function Login( {onLogin} ) {
 }
 
 const Logo = styled.h1`
-    font-family: "wfont_ce530d_5adddf98a77148a3805ed07707ba48ad,wf_5adddf98a77148a3805ed0770,orig_acta_display_light";
+    font-family: "Times New Roman";
     font-size: 3rem;
     color: black;
+    letter-spacing: 0.5em;
     margin: 8px 0 16px;
 `;
 

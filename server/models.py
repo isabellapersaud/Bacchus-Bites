@@ -66,11 +66,12 @@ class Recipe(db.Model, SerializerMixin):
     title = db.Column(db.String)
     category = db.Column(db.String)
     description = db.Column(db.String)
+    ingredients = db.Column(db.String)
     instructions = db.Column(db.String)
     created_at = db.Column(db.DateTime, server_default = db.func.now())
     updated_at = db.Column(db.DateTime, onupdate = db.func.now())
 
-    ingredients = db.relationship("Ingredient", backref='recipe')
+    # ingredients = db.relationship("Ingredient", backref='recipe')
     # recipe_users = db.relationship("RecipeUser", backref="recipe")
     comments = db.relationship('Comment', backref='recipe')
 

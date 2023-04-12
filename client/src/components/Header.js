@@ -1,29 +1,69 @@
 import React from 'react'
-import {NavLink} from "react-router-dom";
+import styled from "styled-components";
+import { NavLink } from 'react-router-dom';
+
+const HeaderContainer = styled.header`
+    width: 100%; 
+    padding: 0;
+    margin: 0; 
+`;
+
+const NavbarContainer = styled.nav`
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+`;
+
+const NavbarList = styled.ul`
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+`;
+
+const NavbarItem = styled.li`
+    margin-right: 1rem; 
+`;
+
+const NavbarLink = styled.a`
+    font-family: "Times New Roman", sans-serif; 
+    font-size: 20px; 
+    font-weight: bold; 
+    color: #333; 
+    text-decoration: none; 
+    
+    
+    &:hover {
+      color: #ff0000; /* Change the font color on hover */
+    }
+    
+`;
 
 function Header() {
         return(
-        <header>
-    
-            <div classname = 'nav'>
-            <nav>
-                <div className="Route Buttons">
-                <NavLink exact to="/" activeClassName="active-nav-link" className="nav-btn">
-                <span>Home</span>
-                </NavLink>
-                <NavLink exact to="/recipes" activeClassName="active-nav-link" className="nav-btn">
-                <span>Recipes</span>
-                </NavLink>
-                <NavLink exact to="/ingredients" activeClassName="active-nav-link" className="nav-btn">
-                <span>Ingredients</span>
-                </NavLink>
-                <NavLink exact to="/comments" activeClassName="active-nav-link" className="nav-btn">
-                <span>Comments</span>
-                </NavLink>
+            <HeaderContainer>
+                <div className="nav">
+                <NavbarContainer>
+                    <NavbarList>
+                    <NavbarItem>
+                        <NavLink to = "/">Home</NavLink>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <NavLink to = "/recipes">Recipes</NavLink>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <NavLink to =  "/ingredients">Ingredients</NavLink>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <NavLink  to = "/comments">Comments</NavLink>
+                    </NavbarItem>
+                    <NavbarItem>
+                        <NavLink  to = "/about">About</NavLink>
+                    </NavbarItem>
+                    </NavbarList>
+                </NavbarContainer>
                 </div>
-            </nav>
-            </div>
-        </header>
+            </HeaderContainer>
         )
     }
 export default Header;
