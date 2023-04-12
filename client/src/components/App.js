@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Switch, Route, BrowserRouter as Router} from "react-router-dom";
 import Login from "./Login";
 import Home from "./Home";
@@ -6,7 +6,7 @@ import About from "./About";
 import Header from "./Header";
 import SearchBar from "./SearchBar";
 import Filters from "./Filter";
-import NavBar from "./NavBar";
+// import NavBar from "./NavBar";
 import RecipePage from "./RecipePage";
 import Recipe from "../components/Recipe";
 import Ingredients from "./Ingredient";
@@ -14,12 +14,14 @@ import IngredientPage from "./IngredientPage";
 import RecipeDetailsPage from "./RecipeDetailsPage";
 import Ingredient from "./Ingredient";
 import './SearchBar.css'; 
+import {UserContext} from "./UserContext"
 
 
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useContext(UserContext);
   const [recipes, setRecipes] = useState([])
+
   const [searchText, setSearchText] = useState("");
   const [filteredRecipesArray, setFilteredRecipesArray] = useState([]);
   const [categoryName, setCategoryName] = useState('');
@@ -77,8 +79,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar onLogout = {onLogout} />
-      <Header />
+      <Header user = {user} setUser = {setUser}  onLogout = {onLogout}/>
       <SearchBar search={search} handleSearch={handleSearch} setSearch = {setSearch} />
       <br />
         <Switch>
@@ -97,9 +98,6 @@ function App() {
           <Route path="/"> 
             <Home />
           </Route> 
-          <Route path="/"> 
-            <NavBar user={user} onLogout = {onLogout} />
-          </Route>
         </Switch>
       </div>
   )
