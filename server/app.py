@@ -156,7 +156,20 @@ class RecipesById(Resource):
                 jsonify(recipe_dictionary),
                 200
             )
-    
+    def patch(self, id):
+
+        data = request.get_json()
+
+        recipe = Recipe.query.filter_by(id=id).first()
+
+        for attr in data:
+            setattr(recipe, attr, data[attr])
+
+        db.session.add(recipe)
+        db.session.commit()
+
+        return make_response(recipe.to_dict(), 200)
+
 api.add_resource(RecipesById, '/recipes/<int:id>')
 
 
