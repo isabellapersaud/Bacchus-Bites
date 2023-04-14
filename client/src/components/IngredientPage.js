@@ -32,7 +32,7 @@ function IngredientPage({ ingredients }) {
 
     const handleDelete = (ingredient) => {
         // Make DELETE request to backend API to delete ingredient
-        fetch(`/ingredients/`, {
+        fetch(`/ingredients/${ingredient.id}`, {
             method: "DELETE",
         })
             .then(() => {
