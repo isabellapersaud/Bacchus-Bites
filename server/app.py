@@ -185,6 +185,35 @@ class Ingredients(Resource):
         )
 
         return response 
+
+    def post(self):        
+        new_ingredient = Ingredient(
+            name = request.get_json()['name'],
+
+        )
+        db.session.add(new_ingredient)
+        db.session.commit()
+        print(new_ingredient)
+        response = make_response(
+            jsonify(new_ingredient.to_dict()),
+            201
+        )
+        return response
+
+    def delete(self, id):
+        ingredient = Ingredient.query.filter_by(id=id).first()
+        if not ingredient:
+            return make_response(
+                jsonify({'error': 'Ingredient not found'}),
+                404
+            )
+        db.session.delete(ingredient)
+        db.session.commit()
+
+        return make_response(
+            jsonify({'message': 'Ingredient successfully deleted', 'id':id}),
+            200
+        )
         
 api.add_resource(Ingredients, '/ingredients/')
 
@@ -200,7 +229,7 @@ class Comments(Resource):
         )
 
         return response 
-        
+
 api.add_resource(Comments, '/comments')
 
 
