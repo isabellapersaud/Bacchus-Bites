@@ -26,9 +26,11 @@ class Signup(Resource):
 
         username = request.get_json().get('username')
         password = request.get_json().get('password')
+        email = request.get_json().get('email')
         
         user = User(
-            username = username 
+            username = username,
+            email = email
         )
         user.password_hash = password
 
@@ -42,7 +44,7 @@ class Signup(Resource):
             print(user.to_dict())
             db.session.add(user)
             db.session.commit()
-
+            
             session['user_id'] = user.id
 
 
@@ -52,6 +54,7 @@ class Signup(Resource):
             print(ie.orig)
             print(ie.statement)
             return {'error': '422 Unprocessable Entity'}, 422
+
 
 api.add_resource(Signup, '/signup', endpoint='signup')
 

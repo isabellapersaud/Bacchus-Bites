@@ -5,6 +5,7 @@ function SignUpForm({ onLogin }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
+    const [email, setEmail] = useState("");
     const [errors, setErrors] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -23,6 +24,7 @@ function SignUpForm({ onLogin }) {
                 username,
                 password,
                 password_confirmation: passwordConfirmation,
+                email, 
             }),
         }).then((r) => {
             setIsLoading(false);
@@ -66,6 +68,17 @@ function SignUpForm({ onLogin }) {
             autoComplete="current-password"
             />
         </FormField>
+        <FormField>
+            <Label htmlFor="email">Email</Label>
+            <Input
+            type="text"
+            id="email"
+            autoComplete="off"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            />
+        </FormField>
+        
         <FormField>
             <Button type="submit">{isLoading ? "Loading..." : "Sign Up"}</Button>
         </FormField>

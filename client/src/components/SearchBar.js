@@ -27,102 +27,42 @@ export default SearchBar;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// import Recipe from "./Recipe"
-
-//     const RecipeSearchBar = ({ recipes, onSearch }) => {
-//     const [query, setQuery] = useState("");
-
-//     const handleInputChange = (event) => {
-//         setQuery(event.target.value);
-//     };
-
-//     const handleSearch = () => {
-//         onSearch(query);
-//     };
-
-//     return (
-//         <div>
-//         <input
-//             type="text"
-//             placeholder="Search for recipes"
-//             value={query}
-//             onChange={handleInputChange}
-//         />
-//         <button onClick={handleSearch}>Search</button>
-//         </div>
-//     );
-// };
-
-// export default RecipeSearchBar;
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React, { useState } from "react";
-// import { Input, Icon } from 'semantic-ui-react';
-// import './Search.css';
 
-// function Search({ handleSearch, recipes }) {
-//     const [searchText, setSearchText] = useState("");
+// function SearchBar({ handleSearch, search, setSearch }) {
+//     const [searchType, setSearchType] = useState("recipe"); // Add state to track search type
 
+//     function handleInputChange(e) {
+//         const { value } = e.target;
+//         setSearch(value);
+//         handleSearch(value, searchType); // Pass search type to handleSearch
+//     }
 
-
-//     const filterRecipes = () => {
-//         if (typeof searchText !== 'string') {
-//             return []; // Return empty array when searchText is not a string
-//         }
-
-//         return recipes.filter(recipe => {
-//             if (recipe && recipe.name) {
-//                 return recipe.name.toLowerCase().includes(searchText.toLowerCase());
-//             }
-//             return false;
-//         });
+//     function handleSearchTypeChange(e) {
+//         const { value } = e.target;
+//         setSearchType(value);
+//         handleSearch(search, value); // Pass updated search type to handleSearch
 //     }
 
 //     return (
 //         <div className="search">
-//             <Input
+//             <input
 //                 type="text"
-//                 value={searchText}
-//                 className="searchTerm transparent"
-//                 icon={<Icon name="search" className="grey" />}
+//                 value={search}
+//                 className="searchTerm"
 //                 placeholder="Search..."
-//                 onChange={(e) => {
-//                     setSearchText(e.target.value);
-//                     handleSearch(e.target.value);
-//                 }}
+//                 onChange={handleInputChange}
 //             />
-//             {filterRecipes().map(recipe => (
-//                 <div key={recipe.id}>
-//                     <h3>{recipe.title}</h3>
-//                     {/* Render other recipe details */}
-//                 </div>
-//             ))}
+//             <select
+//                 value={searchType}
+//                 className="searchType"
+//                 onChange={handleSearchTypeChange}
+//             >
+//                 <option value="recipe">Recipe</option>
+//                 <option value="ingredient">Ingredient</option>
+//             </select>
 //         </div>
 //     );
 // }
 
-// export default Search;
+// export default SearchBar;
