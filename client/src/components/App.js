@@ -5,7 +5,7 @@ import Home from "./Home";
 import About from "./About";
 import Header from "./Header";
 import SearchBar from "./SearchBar";
-import Filters from "./Filter";
+import Filter from "./Filter";
 // import NavBar from "./NavBar";
 import RecipePage from "./RecipePage";
 import Recipe from "../components/Recipe";
@@ -24,8 +24,9 @@ function App() {
   const [filteredRecipesArray, setFilteredRecipesArray] = useState([]);
   const [ingredients, setIngredients] = useState([])
   const [search, setSearch] = useState("");
-  const [categoryName, setCategoryName] = useState('')
+  const [categoryName, setCategoryName] = useState("")
   const [theme, setTheme] = useState("light");
+
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
@@ -69,21 +70,17 @@ function App() {
     return recipe.title.toLowerCase().includes(search.toLowerCase())
   })
 
-  const handleCategory = (e) => {
-    // console.log(e.target.value)
-    setCategoryName(e.target.value);
+  const handleCategory = (categoryName) => {
+    setCategoryName(categoryName);
+}
+function filterCategory() {
+  if (categoryName === 'All' || categoryName === '') {
+      return filteredRecipes;
+  } else {
+      return filteredRecipes.filter((recipe) => recipe.category === categoryName);
   }
-  function filterCategory() {
-    // filter set to all or not filtered
-    if (categoryName === 'All' || categoryName === '') {
+}
 
-      return handleSearch ()
-    } 
-    else {
-      return recipes.filter(recipe => recipe.category === categoryName)
-    }
-  } 
-  
   function onLogout() {
     setUser(null)
   }
@@ -92,7 +89,8 @@ function App() {
   return (
     <div className={`background ${theme} App`}>
         <button onClick={toggleTheme}>Toggle Theme</button>
-      <Header user = {user} setUser = {setUser}  onLogout = {onLogout}/>
+      <Header user = {user} setUser = {setUser}  onLogout = {onLogout}/>    
+      <Filter handleCategory={handleCategory} /> 
       <SearchBar search={search} handleSearch={handleSearch} setSearch = {setSearch} />
       <br />
         <Switch>
@@ -100,7 +98,8 @@ function App() {
             <About />
           </Route> 
           <Route exact path="/recipes"> 
-            <RecipePage recipes = {filteredRecipes}  />
+            <RecipePage 
+            recipes = {filterCategory()}  />
           </Route>
           <Route exact path = "/recipes/:id">
             <RecipeDetailsPage  recipes = {recipes} />

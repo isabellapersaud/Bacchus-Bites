@@ -51,6 +51,29 @@ const NavbarLink = styled.a`
     
 `;
 
+
+const Logo = styled.h1`
+    font-family: "Noto Serif Japanese";
+    font-size: 3rem;
+    color: black;
+    letter-spacing: 0.5em;
+    margin: 8px 0 16px;
+    text-align: center;
+a {
+    color: inherit;
+    text-decoration: none;
+}
+`;
+
+const Nav = styled.nav`
+    display: flex;
+    gap: 4px;
+    position: absolute;
+    right: 8px;
+`;
+
+
+
 function Header({user, setUser, onLogout}) {
 
     function handleClick() {
@@ -110,51 +133,3 @@ function Header({user, setUser, onLogout}) {
 
 export default Header;
 
-
-// const Wrapper = styled.header`
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     padding: 8px;
-// `;
-
-
-const Logo = styled.h1`
-    font-family: "Noto Serif Japanese";
-    font-size: 3rem;
-    color: black;
-    letter-spacing: 0.5em;
-    margin: 8px 0 16px;
-    text-align: center;
-a {
-    color: inherit;
-    text-decoration: none;
-}
-`;
-
-const Nav = styled.nav`
-    display: flex;
-    gap: 4px;
-    position: absolute;
-    right: 8px;
-`;
-
-
-
-
-// const Logo = styled.a`
-//     font-family: 'Playfair Display', serif; /* Use a similar font family */
-//     font-size: 3rem;
-//     font-weight: bold;
-//     color: #ff7b54; /* Use the same color as the reference website */
-// a {
-//     color: #ff7b54;
-//     text-decoration: none;
-//     transition: color 0.3s ease-in-out;
-// }
-// `;
-
-
-// const Logo a:hover {
-//     color: #ffecd3; /* Use the same hover color as the reference website */
-// }
