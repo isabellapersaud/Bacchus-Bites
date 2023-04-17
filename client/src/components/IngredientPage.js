@@ -15,7 +15,7 @@ function IngredientPage({ ingredients }) {
     };
 
     const handleSubmit = () => {
-        fetch(`/ingredients/`, {
+        fetch(`/ingredients`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -31,6 +31,7 @@ function IngredientPage({ ingredients }) {
     };
 
     const handleDelete = (ingredient) => {
+        console.log(ingredient.id)
         // Make DELETE request to backend API to delete ingredient
         fetch(`/ingredients/${ingredient.id}`, {
             method: "DELETE",

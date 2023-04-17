@@ -12,6 +12,7 @@ const HeaderContainer = styled.header`
     width: 100%; 
     padding: 0;
     margin: 0; 
+
 `;
 
 const NavbarContainer = styled.nav`
@@ -29,18 +30,23 @@ const NavbarList = styled.ul`
 
 const NavbarItem = styled.li`
     margin-right: 1rem; 
+    color: #000; /* Set the desired color for the route links (e.g., black) */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease-in-out;
+
 `;
 
 const NavbarLink = styled.a`
     font-family: "Times New Roman", sans-serif; 
-    font-size: 20px; 
-    font-weight: bold; 
+    font-size: 20px;
     color: #333; 
     text-decoration: none; 
+    margin: 0;
     
     
     &:hover {
-      color: #ff0000; /* Change the font color on hover */
+        color: brown
     }
     
 `;
@@ -84,16 +90,16 @@ function Header({user, setUser, onLogout}) {
             <NavbarContainer>
                 <NavbarList>
                 <NavbarItem>
-                    <NavLink exact to = "/">Home</NavLink>
+                    <NavLink ink exact to = "/">Home</NavLink >
                 </NavbarItem>
                 <NavbarItem>
-                    <NavLink to = "/recipes">Recipes</NavLink>
+                    <NavLink  to = "/recipes">Recipes</NavLink >
                 </NavbarItem>
                 <NavbarItem>
-                    <NavLink to =  "/ingredients">Ingredients</NavLink>
+                    <NavLink  to =  "/ingredients">Ingredients</NavLink >
                 </NavbarItem>
                 <NavbarItem>
-                    <NavLink  to = "/about">About</NavLink>
+                    <NavLink   to = "/about">About</NavLink >
                 </NavbarItem>
                 </NavbarList>
             </NavbarContainer>
@@ -105,12 +111,12 @@ function Header({user, setUser, onLogout}) {
 export default Header;
 
 
-const Wrapper = styled.header`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-`;
+// const Wrapper = styled.header`
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 8px;
+// `;
 
 
 const Logo = styled.h1`
@@ -119,6 +125,7 @@ const Logo = styled.h1`
     color: black;
     letter-spacing: 0.5em;
     margin: 8px 0 16px;
+    text-align: center;
 a {
     color: inherit;
     text-decoration: none;
@@ -131,3 +138,23 @@ const Nav = styled.nav`
     position: absolute;
     right: 8px;
 `;
+
+
+
+
+// const Logo = styled.a`
+//     font-family: 'Playfair Display', serif; /* Use a similar font family */
+//     font-size: 3rem;
+//     font-weight: bold;
+//     color: #ff7b54; /* Use the same color as the reference website */
+// a {
+//     color: #ff7b54;
+//     text-decoration: none;
+//     transition: color 0.3s ease-in-out;
+// }
+// `;
+
+
+// const Logo a:hover {
+//     color: #ffecd3; /* Use the same hover color as the reference website */
+// }

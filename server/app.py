@@ -200,6 +200,24 @@ class Ingredients(Resource):
         )
         return response
 
+api.add_resource(Ingredients, '/ingredients')
+
+
+
+
+class IngredientsById(Resource):
+    def get(self):
+
+        ingredients = Ingredient.query.all()
+        ingredients_dict =  [ingredient.to_dict() for ingredient in ingredients]
+
+        response = make_response(
+            jsonify(ingredients_dict),
+            200
+        )
+
+        return response 
+
     def delete(self, id):
         ingredient = Ingredient.query.filter_by(id=id).first()
         if not ingredient:
@@ -214,23 +232,9 @@ class Ingredients(Resource):
             jsonify({'message': 'Ingredient successfully deleted', 'id':id}),
             200
         )
-        
-api.add_resource(Ingredients, '/ingredients/')
 
+api.add_resource(IngredientsById, '/ingredients/<int:id>')
 
-class Comments(Resource):
-    def get(self):
-        comments = Comment.query.all()
-        comments_dict =  [comment.to_dict() for comment in comments]
-
-        response = make_response(
-            jsonify(comments_dict),
-            200
-        )
-
-        return response 
-
-api.add_resource(Comments, '/comments')
 
 
 class RecipeIngredients(Resource):

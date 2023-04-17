@@ -21,12 +21,11 @@ import {UserContext} from "./UserContext"
 function App() {
   const [user, setUser] = useContext(UserContext);
   const [recipes, setRecipes] = useState([])
-
   const [searchText, setSearchText] = useState("");
   const [filteredRecipesArray, setFilteredRecipesArray] = useState([]);
-  const [categoryName, setCategoryName] = useState('');
   const [ingredients, setIngredients] = useState([])
   const [search, setSearch] = useState("");
+  const [categoryName, setCategoryName] = useState('')
 
 
   // const [isDarkMode, setIsDarkMode] = useState(false);
@@ -71,6 +70,22 @@ function App() {
   const filteredRecipes = recipes.filter(recipe => {
     return recipe.title.toLowerCase().includes(search.toLowerCase())
   })
+
+  const handleCategory = (e) => {
+    // console.log(e.target.value)
+    setCategoryName(e.target.value);
+  }
+  function filterCategory() {
+    // filter set to all or not filtered
+    if (categoryName === 'All' || categoryName === '') {
+
+      return handleSearch ()
+    } 
+    else {
+      return recipes.filter(recipe => recipe.category === categoryName)
+    }
+  } 
+
 
   function onLogout() {
     setUser(null)
