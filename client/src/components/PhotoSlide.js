@@ -30,6 +30,34 @@ const PhotoSlide = () => {
             imageUrl: 'https://i.pinimg.com/564x/cc/17/f5/cc17f5e7e64ee7ee149aa8694f478388.jpg',
             id : 7,
         },
+        {
+            imageUrl: 'https://i.pinimg.com/564x/26/08/cd/2608cdcc36f83c27818c81f6d094a35b.jpg',
+            id : 8,
+        },
+        {
+            imageUrl: 'https://i.pinimg.com/564x/ce/8d/43/ce8d43b3aa98a4ed38b6e9ba946e0980.jpg',
+            id : 9,
+        },
+        {
+            imageUrl: 'https://i.pinimg.com/564x/11/2e/9d/112e9d3512c81093aa3ad3fef438b9f6.jpg',
+            id : 10,
+        },
+        {
+            imageUrl: 'https://i.pinimg.com/564x/13/55/2e/13552e0bfcd020f6d74212f494ccec83.jpg',
+            id : 11,
+        },
+        {
+            imageUrl: 'https://i.pinimg.com/564x/9c/30/8e/9c308ef1e1b703d75aa38b3da656e845.jpg',
+            id : 12,
+        },
+        {
+            imageUrl: 'https://i.pinimg.com/564x/ea/d3/1d/ead31d8c22e189a285c66d919c26f56a.jpg',
+            id : 13,
+        },
+        {
+            imageUrl: 'https://i.pinimg.com/564x/cc/17/f5/cc17f5e7e64ee7ee149aa8694f478388.jpg',
+            id : 14,
+        },
     ]);
     const [currentPhoto, setCurrentPhoto] = useState(0);
 

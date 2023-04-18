@@ -7,7 +7,10 @@ const linkStyle = {
     textDecoration: "none"
     };
 
+
     function RecipePage({ recipes }) {
+
+
     return (
         <div className="card" style={{ display: "flex", flexWrap: "wrap" }}>
         {recipes.map(recipe => (

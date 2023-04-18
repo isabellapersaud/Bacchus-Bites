@@ -1,36 +1,12 @@
-.nav {
-    background-color: #3f3f3f;
-    padding: 10px 0;
+navbar-link.a {
+    color: black;
 }
 
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  /* Set the color of active nav links to black */
+.navbar-link.active {
+    color: black;
 }
 
-.navbar-list {
-    display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.navbar-link.li {
+    color: black;
 }
-
-.navbar-item {
-    margin-right: 10px;
-}
-
-.navbar-link {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 10px;
-    transition: color 0.3s ease-in-out;
-}
-
-.navbar-link:hover {
-    color: #ff7675;
-}
-

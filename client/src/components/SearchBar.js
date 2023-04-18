@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FaSearch } from "react-icons/fa"; // Import the magnifying glass icon from a library like react-icons
 
 function SearchBar({ handleSearch, search, setSearch }) {
     // const [search, setSearch] = useState("");
@@ -18,51 +19,21 @@ function SearchBar({ handleSearch, search, setSearch }) {
                 className="searchTerm"
                 placeholder="Search..."
                 onChange={handleInputChange}
+                style={{
+                    border: "none",
+                    borderBottom: "1px solid #000",
+                    outline: "none",
+                    marginRight: "8px", // Add some spacing between the input and the icon
+                }}
+            />
+            <FaSearch // Render the magnifying glass icon
+                style={{
+                    cursor: "pointer",
+                    fontSize: "15px",
+                }}
             />
         </div>
     );
 }
 
 export default SearchBar;
-
-
-
-// import React, { useState } from "react";
-
-// function SearchBar({ handleSearch, search, setSearch }) {
-//     const [searchType, setSearchType] = useState("recipe"); // Add state to track search type
-
-//     function handleInputChange(e) {
-//         const { value } = e.target;
-//         setSearch(value);
-//         handleSearch(value, searchType); // Pass search type to handleSearch
-//     }
-
-//     function handleSearchTypeChange(e) {
-//         const { value } = e.target;
-//         setSearchType(value);
-//         handleSearch(search, value); // Pass updated search type to handleSearch
-//     }
-
-//     return (
-//         <div className="search">
-//             <input
-//                 type="text"
-//                 value={search}
-//                 className="searchTerm"
-//                 placeholder="Search..."
-//                 onChange={handleInputChange}
-//             />
-//             <select
-//                 value={searchType}
-//                 className="searchType"
-//                 onChange={handleSearchTypeChange}
-//             >
-//                 <option value="recipe">Recipe</option>
-//                 <option value="ingredient">Ingredient</option>
-//             </select>
-//         </div>
-//     );
-// }
-
-// export default SearchBar;
