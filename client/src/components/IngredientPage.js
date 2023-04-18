@@ -14,6 +14,7 @@ function IngredientPage({ ingredients }) {
     const handleInputChange = (e) => {
         setNewIngredient({ ...newIngredient, [e.target.name]: e.target.value });
     };
+    
 
 
 
@@ -68,18 +69,13 @@ function IngredientPage({ ingredients }) {
 
     return (
         <div>
-            <Grid columns={4} >
-                <Grid.Row>{ingredientCards}</Grid.Row>
-            </Grid>
-
             <h2>Grocery List</h2>
             <ul>
                 {groceryList.map((ingredient, index) => (
                     <li key={index}>{ingredient.name}</li>
                 ))}
             </ul>
-
-            <h2>Create New Ingredient</h2>
+            <h2 style={{ textAlign: "left" }}> Create New Ingredient</h2>
             <Form>
                 <Form.Input
                     label="Name"
@@ -87,9 +83,20 @@ function IngredientPage({ ingredients }) {
                     name="name"
                     value={newIngredient.name}
                     onChange={handleInputChange}
-                />
-                <Button onClick={handleSubmit}>Submit</Button>
+                    style={{ width: "200px" }} // Set the width using inline styles
+            />
+                {/* <Form.Input
+                    label="Image URL"
+                    type="url" // Set the type to "url"
+                    name="image"
+                    value={newIngredient.image} // Use the appropriate value and onChange function
+                    onChange={handleInputChange}
+                /> */}
+            <Button onClick={handleSubmit}>Submit</Button>
             </Form>
+            <Grid columns={4} >
+                <Grid.Row>{ingredientCards}</Grid.Row>
+            </Grid>
         </div>
     );
 }
