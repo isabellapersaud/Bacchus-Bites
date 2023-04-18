@@ -47,11 +47,9 @@ const NavbarItem = styled.li`
 const NavbarLink = styled.a`
     font-family: 'Playfair Display', serif; 
     font-size: 50px;
-    color: black; 
     text-decoration: none; 
     margin: 0;
-    
-    
+
     &:hover {
         color: black
     }
@@ -82,7 +80,7 @@ const Nav = styled.nav`
     gap: 4px;
     position: absolute;
     right: 8px;
-    font-size: 'Playfair Display', serif; 
+    font-family: 'Playfair Display', serif; 
     font-size: 1rem;
     color: black; 
 
@@ -140,15 +138,15 @@ function Header({user, setUser, onLogout}) {
                 variant="outline"
                 onClick={handleLogout}
                 style={{
-                    color: 'black', // Set text color to black
-                    backgroundColor: 'transparent', // Set background color to transparent
-                    border: '1px solid black', // Add a border
-                    borderRadius: '4px', // Add border radius for rounded corners
-                    padding: '5px 10px', // Add padding for button size
-                    cursor: 'pointer', // Show pointer cursor on hover
-                    textDecoration: 'none', // Remove underline
-                    fontSize: '14px', // Set font size
-                    margin: '0', // Remove margin
+                    color: 'black', 
+                    backgroundColor: 'transparent', 
+                    border: '1px solid black', 
+                    borderRadius: '4px',
+                    padding: '5px 10px', 
+                    cursor: 'pointer', 
+                    textDecoration: 'none', 
+                    fontSize: '14px', 
+                    margin: '0', 
                 }}
             >
                 Logout
@@ -168,10 +166,10 @@ function Header({user, setUser, onLogout}) {
                     <NavLink  to = "/recipes" style={{ color: "black" }}>Recipes</NavLink >
                 </NavbarItem>
                 <NavbarItem>
-                    <NavLink  to =  "/ingredients" style={{ color: "black" }}>Ingredients</NavLink >
+                    <NavLink  to =  "/ingredients" style={{ color: "black" }} >Ingredients</NavLink >
                 </NavbarItem>
                 <NavbarItem>
-                    <NavLink   to = "/about "style={{ color: "black" }}>About</NavLink >
+                    <NavLink   to = "/about" style={{ color: "black" }}>About</NavLink >
                 </NavbarItem>
                 </NavbarList>
             </NavbarContainer>
@@ -181,3 +179,6 @@ function Header({user, setUser, onLogout}) {
 }
 
 export default Header;
+
+
+// style={{ color: "black" }}

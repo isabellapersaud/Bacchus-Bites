@@ -1,6 +1,45 @@
-.img{
+/* .img{
     height: 422px;
     width: 980px;
     object-fit: cover;
     object-position: 100%;
+} */
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif; 
+    text-align: center;
+}
+
+/* img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+} */
+
+h2 {
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif; 
+    text-align: center;
+}
+
+h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif; 
+    text-align: center;
+
 }
