@@ -7,10 +7,9 @@ import PhotoSlide2 from './PhotoSlide2';
 function Home() {
 
     const opts = {
-        height: '360', // set the desired height
-        width: '640', // set the desired width
+        height: '360', 
+        width: '640', 
         playerVars: {
-          // https://developers.google.com/youtube/player_parameters
             autoplay: 0,
         },
     };
@@ -18,7 +17,6 @@ function Home() {
     return (
         <div>
             <PhotoSlide />
-            {/* Add other content of your homepage */}
             <br />
             <div style={{ display: 'flex', alignItems: 'center' }}>
                 <PhotoSection
@@ -32,9 +30,9 @@ function Home() {
                 />
                 <p
                     style={{
-                        flex: '1', // This will make the <p> tag take up the remaining space
-                        textAlign: 'center', // This will align the text to the right
-                        marginRight: '50px', // Add margin to create space between the image and text
+                        flex: '1', 
+                        textAlign: 'center', 
+                        marginRight: '50px', 
                         fontFamily: 'Playfair Display',
                         fontSize: '25px',
                     }}
@@ -45,9 +43,9 @@ function Home() {
             <br />
             <PhotoSlide2 />
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
-            {/* Add other content of your homepage */}
-                <br />
-            {/* Embed YouTube video */}
+                <p style = {{margin: "0", padding: "0", lineHeight: "1.2" }}>
+                    Renowned culinary expert and esteemed role model, Chef Gordon Ramsay, embarked on a culinary expedition to that of Georgetown, Guyana, where he eagerly indulged in the region's diverse and tantalizing cuisine.
+                </p>
                 <YouTube videoId="zD-rWaMPosI" opts={opts} />
             </div>
 

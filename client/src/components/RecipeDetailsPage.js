@@ -34,7 +34,7 @@ function RecipeDetailsPage({ recipes }) {
             return response.json();
         })
         .then((data) => {
-            // Update the recipe with the new likes count in the local state
+        
             const updatedRecipes = recipes.map((recipe) => {
                 if (recipe.id === data.id) {
                     return data;
@@ -42,7 +42,6 @@ function RecipeDetailsPage({ recipes }) {
                     return recipe;
                 }
             });
-            // Call a function to update the recipes in your parent component
             updateRecipes(updatedRecipes);
         })
         .catch((error) => {
@@ -66,7 +65,7 @@ function RecipeDetailsPage({ recipes }) {
                 }}>
                 {recipe.title}
             </h2>
-            <p>{recipe.description} </p>
+            <p style = {{fontFamily:'Tangerine', fontSize: "40px"}}>{recipe.description} </p>
             <img src={recipe.image} alt={recipe.title} className="recipe-image"style={{width: "100%", height: "422px",objectFit: "cover",objectPosition: "100%", }} />
             <h1>{recipe.category}</h1>
             <button onClick={handleFavorite} style={{  display: "block", margin: "auto", textAlign: "center", }}>

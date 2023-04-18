@@ -118,16 +118,16 @@ function Header({user, setUser, onLogout}) {
 
             <ul
                 style={{
-                    listStyleType: 'none', // Remove default list style
-                    padding: '0', // Remove default padding
-                    margin: '0', // Remove default margin
-                    padding: '10px', // Add padding
-                    fontSize: '30px', // Set font size
-                    color: '#000', // Set text color
+                    listStyleType: 'none',
+                    padding: '0', 
+                    margin: '0', 
+                    padding: '10px', 
+                    fontSize: '30px', 
+                    color: '#000', 
                     fontFamily: 'Playfair Display', 
-                    display: 'flex', // Use flexbox to center align
-                    justifyContent: 'right', // Center align horizontally
-                    alignItems: 'right', // Center align vertically
+                    display: 'flex', 
+                    justifyContent: 'right', 
+                    alignItems: 'right', 
                     height: '100%', 
             }}
         >

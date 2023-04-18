@@ -23,7 +23,7 @@ function IngredientPage({ ingredients }) {
             method: "DELETE",
         })
             .then(() => {
-                // Remove the deleted ingredient from the grocery list
+
                 const updatedGroceryList = groceryList.filter((item) => item.id !== ingredient.id);
                 setGroceryList(updatedGroceryList);
             })

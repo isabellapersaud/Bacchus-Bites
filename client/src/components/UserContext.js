@@ -17,7 +17,7 @@ export const UserProvider = ({ children }) => {
     }, []);
 
     useEffect(() => {
-        fetch("/recipes")       // link for the books DB
+        fetch("/recipes")       
             .then((res) => res.json())
             .then((data) => setRecipes(data));
     }, []);

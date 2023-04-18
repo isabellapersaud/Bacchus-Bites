@@ -72,7 +72,7 @@ const PhotoSlide2 = () => {
                 style={{
                 flex: '0 0 auto',
                 marginRight: '10px',
-                minWidth: '200px', // Optional: Set a minimum width for each photo
+                minWidth: '200px', 
                 }}
             >
                 <img

@@ -2,7 +2,7 @@ import React from 'react';
 
 
 function PhotoSection(props) {
-  // Destructure props to get the photoUrl and text
+    
     const { photoUrl, text } = props;
 
     return (

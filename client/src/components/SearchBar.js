@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaSearch } from "react-icons/fa"; // Import the magnifying glass icon from a library like react-icons
+import { FaSearch } from "react-icons/fa"; 
 
 function SearchBar({ handleSearch, search, setSearch }) {
     // const [search, setSearch] = useState("");
