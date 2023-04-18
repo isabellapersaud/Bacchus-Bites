@@ -25,7 +25,8 @@ function About() {
 
     return (
     <div>
-        <h2>HELLO blah blah blah</h2>
+        <h2>Hey there:)</h2>
+        <p>My name is Isabella. I am a Guyanese American home cook. I started to dabble in the kitchen around the age of 12, where I would help my mother and grandmother in the afternoons after school. Growing up watching my grandmother create extraordinary dishes for my cousins and I is what truly sparked this passion for cooking. </p>
         <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
             <div style={{ textAlign: "center", maxWidth: "400px", padding: "1rem", border: "1px solid #ccc", borderRadius: "4px" }}>
                 <h1>Want More Recipes?!</h1>

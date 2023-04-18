@@ -56,21 +56,31 @@ function RecipeDetailsPage({ recipes }) {
 
     return (
         <div>
-            <h1>{recipe.title}</h1>
-            <h1>{recipe.name}</h1>
-            <button onClick={handleFavorite}>
+            <h2 style={{
+                    fontFamily: "'Birthstone', cursive",
+                    letterSpacing: "0.5em",
+                    textAlign: "center",
+                    fontWeight: "normal",
+                    fontSize:"90px"
+
+                }}>
+                {recipe.title}
+            </h2>
+            <p>{recipe.description} </p>
+            <img src={recipe.image} alt={recipe.title} className="recipe-image"style={{width: "100%", height: "422px",objectFit: "cover",objectPosition: "100%", }} />
+            <h1>{recipe.category}</h1>
+            <button onClick={handleFavorite} style={{  display: "block", margin: "auto", textAlign: "center", }}>
                 {isFavorite ? (
                     <FontAwesomeIcon icon={faHeart} color="red" />
                 ) : (
                     <FontAwesomeIcon icon={faHeart} />
                 )}
             </button>
-            <button onClick={handleAddLike}>Likes: {recipeLikes}</button>
-            <h3>{recipe.description} </h3>
-            <p>{recipe.category}</p>
-            <p>{recipe.ingredients}</p>
-            <img src={recipe.image} alt={recipe.title} className="recipe-image" />
-            <h2>Instructions:{recipe.instructions}</h2>
+            <button onClick={handleAddLike}  style={{ display: "block", margin: "auto", textAlign: "center", fontSize: "20px", fontFamily: 'Playfair Display'}}>
+                Likes: {recipeLikes}</button>
+            <h3>{recipe.name}</h3>
+            <ul>{recipe.ingredients}</ul>
+            <h4>Instructions:{recipe.instructions}</h4>
         </div>
     );
 };

@@ -1,33 +1,3 @@
-// import React from "react";
-// import { Card, Image } from "semantic-ui-react";
-// import { Link } from "react-router-dom";
-// import "./RecipePage.css";
-
-// function RecipePage({ recipes }) {
-//     return (
-//         <div className="card-wrapper">
-//         {recipes.map((recipe) => (
-//             <Link to={`/recipes/${recipe.id}`} key={recipe.id} className="link">
-//             <Card className="card">
-//                 <Image src={recipe.image} alt={recipe.title} className="image" />
-//                 <Card.Content className="content">
-//                 <Card.Header
-//                 className="header"
-//                 style={{ fontFamily: 'Playfair Display', fontSize: "16px" }}
-//                 >
-//                     {recipe.title}
-//                 </Card.Header>
-//                 </Card.Content>
-//             </Card>
-//             </Link>
-//         ))}
-//         </div>
-//     );
-// }
-
-// export default RecipePage;
-
-
 import React from "react";
 import { Card, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
@@ -38,7 +8,7 @@ function RecipePage({ recipes }) {
         <div className="card-wrapper">
         {recipes.map((recipe) => (
             <Link to={`/recipes/${recipe.id}`} key={recipe.id} className="link">
-            <Card className="card recipe-card"> {/* Add the "recipe-card" class */}
+            <Card className="card" id={`recipe-card-${recipe.id}`}> {/* Add an id to the card component */}
                 <Image src={recipe.image} alt={recipe.title} className="image" />
                 <Card.Content className="content">
                 <Card.Header
@@ -56,4 +26,3 @@ function RecipePage({ recipes }) {
 }
 
 export default RecipePage;
-

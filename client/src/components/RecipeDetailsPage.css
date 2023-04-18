@@ -1,9 +1,9 @@
-/* .img{
+.img{
     height: 422px;
     width: 980px;
     object-fit: cover;
     object-position: 100%;
-} */
+}
 
 .container {
     max-width: 800px;
@@ -21,6 +21,7 @@ h1 {
     margin-bottom: 10px;
     font-family: 'Playfair Display', serif; 
     text-align: center;
+    font-weight: normal;
 }
 
 /* img {
@@ -29,19 +30,42 @@ h1 {
     margin-bottom: 20px;
 } */
 
+ul {
+    font-weight: normal;
+    font-family: 'Playfair Display', serif; 
+}
+
 h2 {
     font-size: 20px;
     margin-top: 20px;
     font-family: 'Playfair Display', serif; 
     text-align: center;
-}
+    font-weight: bold;
+} 
 
 h3 {
     font-size: 20px;
     margin-top: 20px;
     font-family: 'Playfair Display', serif; 
     text-align: center;
+}
 
+h4 {
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif; 
+    text-align: left;
+    font-weight: normal;
+    
+
+}
+
+p {
+    font-size: 20px;
+    margin-top: 20px;
+    font-family: 'Playfair Display', serif; 
+    text-align: center;
+    font-weight: normal;
 }
 
 .recipe-image {
