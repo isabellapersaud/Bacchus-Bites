@@ -69,7 +69,7 @@ function RecipeDetailsPage({ recipes }) {
             <h3>{recipe.description} </h3>
             <p>{recipe.category}</p>
             <p>{recipe.ingredients}</p>
-            <img src={recipe.image} alt={recipe.title} />
+            <img src={recipe.image} alt={recipe.title} className="recipe-image" />
             <h2>Instructions:{recipe.instructions}</h2>
         </div>
     );

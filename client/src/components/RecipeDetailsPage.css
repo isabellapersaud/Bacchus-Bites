@@ -43,3 +43,10 @@ h3 {
     text-align: center;
 
 }
+
+.recipe-image {
+    max-width: 100%;
+    max-height: 50%;
+    border-radius: 8px;
+    /* Add any other styles you want to apply to the image */  
+}

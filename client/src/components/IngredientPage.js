@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Ingredient from "./Ingredient";
-import { Card, Form, Button } from "semantic-ui-react";
+import { Card, Form, Button, Grid } from "semantic-ui-react";
 
 function IngredientPage({ ingredients }) {
     const [groceryList, setGroceryList] = useState([]);
@@ -18,8 +18,6 @@ function IngredientPage({ ingredients }) {
 
 
     const handleDelete = (ingredient) => {
-        console.log(ingredient.id)
-        // Make DELETE request to backend API to delete ingredient
         fetch(`/ingredients/${ingredient.id}`, {
             method: "DELETE",
         })
@@ -55,19 +53,24 @@ function IngredientPage({ ingredients }) {
         Array.isArray(ingredients) &&
         ingredients.map((ingredient) => {
             return (
+                <Grid.Column key={ingredient.id} computer={4}>
                 <Ingredient
                     key={ingredient.id}
                     ingredientKey={ingredient.id}
+                    image = {ingredient.image}
                     name={ingredient.name}
                     addToGroceryList={addToGroceryList}
                     onDelete={handleDelete} // Pass the handleDelete function as onDelete prop
                 />
+                </Grid.Column>
             );
         });
 
     return (
         <div>
-            {ingredientCards}
+            <Grid columns={4} >
+                <Grid.Row>{ingredientCards}</Grid.Row>
+            </Grid>
 
             <h2>Grocery List</h2>
             <ul>
