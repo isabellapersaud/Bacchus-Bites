@@ -1,21 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
-import Recipe from "./Recipe"
+import Recipe from "./Recipe";
 import "./RecipeDetailsPage.css"
 
 
 function RecipeDetailsPage({ recipes }) {
     const { id } = useParams();
     const recipe = recipes.find(recipe => recipe.id === parseInt(id));
+    console.log('recipe:', recipe);
 
     const [isFavorite, setIsFavorite] = useState(false);
-    const [recipeLikes, setRecipeLikes] = useState(recipe.likes);
+
+    const [recipeLikes, setRecipeLikes] = useState(0);
+
+    useEffect(() => {
+        if (recipe) {
+            setRecipeLikes(recipe.likes);
+        }
+    }, [recipe]);
 
     const handleFavorite = () => {
         setIsFavorite(!isFavorite);
     };
+
+
 
     const handleAddLike = () => {
         const updatedLikes = recipeLikes + 1;
@@ -50,8 +60,10 @@ function RecipeDetailsPage({ recipes }) {
     };
 
     const updateRecipes = (updatedRecipes) => {
-        console.log(updatedRecipes);
     };
+    if (!recipe) {
+        return <div>Recipe not found</div>;
+    }
 
     return (
         <div>
@@ -85,3 +97,5 @@ function RecipeDetailsPage({ recipes }) {
 };
 
 export default RecipeDetailsPage;
+
+
