@@ -79,7 +79,7 @@ function RecipeDetailsPage({ recipes }) {
             </h2>
             <p style = {{fontFamily:'Tangerine', fontSize: "40px"}}>{recipe.description} </p>
             <img src={recipe.image} alt={recipe.title} className="recipe-image"style={{width: "100%", height: "422px",objectFit: "cover",objectPosition: "100%", }} />
-            <h1>{recipe.category}</h1>
+            <h1 style = {{fontFamily: "'Birthstone', cursive",}}>{recipe.category}</h1>
             <button onClick={handleFavorite} style={{  display: "block", margin: "auto", textAlign: "center", }}>
                 {isFavorite ? (
                     <FontAwesomeIcon icon={faHeart} color="red" />
@@ -90,8 +90,10 @@ function RecipeDetailsPage({ recipes }) {
             <button onClick={handleAddLike}  style={{ display: "block", margin: "auto", textAlign: "center", fontSize: "20px", fontFamily: 'Playfair Display'}}>
                 Likes: {recipeLikes}</button>
             <h3>{recipe.name}</h3>
-            <ul>{recipe.ingredients}</ul>
-            <h4>Instructions:{recipe.instructions}</h4>
+            <h1 style= {{fontWeight: 'bold',fontFamily:'Tangerine,fontSize', fontSize:'50px',  textAlign: "center", letterSpacing: '0.5em'}}>Ingredients:</h1>
+            <ul style= {{fontFamily: 'Playfair Display ',fontSize: '20px',  textAlign: "center"}}>{recipe.ingredients}</ul>
+            <h1 style= {{fontWeight: 'bold',fontFamily:'Tangerine,fontSize',fontSize: '50px',  textAlign: "center", letterSpacing: '0.5em'}}>Instructions:</h1>
+            <h4 style = {{fontSize: '20px', fontFamily: 'Playfair Display', }}>{recipe.instructions}</h4>
         </div>
     );
 };

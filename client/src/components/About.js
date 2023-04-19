@@ -1,6 +1,52 @@
+// import React, { useEffect, useState } from "react";
+// import { Form } from "semantic-ui-react";
+// import "./About.css"
+// import ProfilePhoto from '/Users/isabellapersaud/Development/code/phase-5/Bacchus-Bites/client/src/components/ProfilePhoto.png'
+
+// function About() {
+//     const [firstName, setFirstName] = useState("");
+//     const [lastName, setLastName] = useState("");
+//     const [email, setEmail] = useState("");
+
+//     const handleFirstNameChange = (e) => {
+//         setFirstName(e.target.value);
+//     };
+
+//     const handleEmailChange = (e) => {
+//         setEmail(e.target.value);
+//     };
+
+//     const handleSubmit = (e) => {
+//         e.preventDefault();
+//         window.alert("You have been added to the list!");
+//         setFirstName("");
+//         setLastName("");
+//         setEmail("");
+//     };
+
+
+//     return (
+//         <div id="intro-section" style={{ alignItems: "center", justifyContent: "center" , textAlign: 'center', fontFamily:'Tangerine',}}>
+//             <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", textAlign: "center", }}>
+//                 <div style={{ maxWidth: "50%" }}>
+//                     <img src={ProfilePhoto} alt="My Image" style={{ maxWidth: "60%", height: "auto", margin: "1rem" }} />
+//                 </div>
+//                 <div style={{ flex: "1", maxWidth: "50%", }}>
+//                     <p style={{ fontSize: "1.2rem", margin: "0" }}>
+//                     Hey everyone 👋 My name is Isabella! I am thrilled to share my family recipes with you all in hopes to further share my love and appreciation for my culture!
+//                     I first discovered my passion for cooking at a young age, around 12 years old, when I would spend afternoons helping my mother and grandmother in the kitchen. Watching my grandmother create mouthwatering dishes for my cousins and I was an experience that stayed with me and ultimately inspired me to pursue cooking as a hobby.
+//                     Over the years, I've honed my skills and experimented with different flavors and cuisines, and I'm excited to showcase some of my favorite recipes through Bacchus Bites! Whether you're an experienced cook or a beginner, my hope is that you'll find something new and exciting to try.
+//                     I'm excited to share my passion for cooking with you through this app, and I hope that you'll find it to be a valuable resource in your own culinary journey. Thanks for stopping by!
+//                     </p>
+//                 </div>
+
+
+
+
 import React, { useEffect, useState } from "react";
 import { Form } from "semantic-ui-react";
-import "./About.css"
+import "./About.css";
+import ProfilePhoto from "/Users/isabellapersaud/Development/code/phase-5/Bacchus-Bites/client/src/components/ProfilePhoto.png";
 
 function About() {
     const [firstName, setFirstName] = useState("");
@@ -23,21 +69,63 @@ function About() {
         setEmail("");
     };
 
-
     return (
-        <div id="intro-section" style={{ alignItems: "center", justifyContent: "center" , textAlign: 'center', fontFamily:'Tangerine',}}>
-            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexDirection: "column", textAlign: "center", }}>
-                <div style={{ maxWidth: "50%" }}>
-                    <img src="https://www.cookingclassy.com/wp-content/uploads/2014/06/chocolate-chip-cookie-16.jpg" alt="Chocolate Chip Cookie" style={{ maxWidth: "100%", height: "auto", margin: "1rem" }} />
-                </div>
-                <div style={{ flex: "1", maxWidth: "50%", }}>
-                    <p style={{ fontSize: "1.2rem", margin: "0" }}>
-                    Hey everyone 👋 My name is Isabella! I am thrilled to share my family recipes with you all in hopes to further share my love and appreciation for my culture!
-                    I first discovered my passion for cooking at a young age, around 12 years old, when I would spend afternoons helping my mother and grandmother in the kitchen. Watching my grandmother create mouthwatering dishes for my cousins and I was an experience that stayed with me and ultimately inspired me to pursue cooking as a hobby.
-                    Over the years, I've honed my skills and experimented with different flavors and cuisines, and I'm excited to showcase some of my favorite recipes through Bacchus Bites! Whether you're an experienced cook or a beginner, my hope is that you'll find something new and exciting to try.
-                    I'm excited to share my passion for cooking with you through this app, and I hope that you'll find it to be a valuable resource in your own culinary journey. Thanks for stopping by!
-                    </p>
-                </div>
+        <div
+        id="intro-section"
+        style={{
+            alignItems: "center",
+            justifyContent: "center",
+            textAlign: "center",
+            fontFamily: "Tangerine",
+        }}
+        >
+        <div
+            style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            flexDirection: "row",
+            maxWidth: "100%",
+            margin: "0 auto",
+            }}
+        >
+            <div style={{ maxWidth: "30%" }}>
+            <img
+                src={ProfilePhoto}
+                alt="My Image"
+                style={{ maxWidth: "60%", height: "auto", margin: "1rem", borderRadius: "15%", boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)"}}
+            />
+            </div>
+            <div
+            style={{
+                flex: "1",
+                maxWidth: "100%",
+                margin: "1rem",
+                textAlign: "left",
+            }}
+            >
+
+            <h1 style = {{  justifyContent: "center",textAlign: "center", fontFamily: "Tangerine", fontSize: '50px', fontWeight: 'bold', letterSpacing: "0.5em"}}>About Me!</h1>
+            <br />
+            <p style={{ fontSize: "1.2rem", margin: "0" }}>
+                Hey everyone 👋 My name is Isabella! I am thrilled to share my
+                family recipes with you all in hopes to further share my love and
+                appreciation for my culture! I first discovered my passion for
+                cooking at a young age, around 12 years old, when I would spend
+                afternoons helping my mother and grandmother in the kitchen.
+                Watching my grandmother create mouthwatering dishes for my cousins
+                and I was an experience that stayed with me and ultimately inspired
+                me to pursue cooking as a hobby. Over the years, I've honed my
+                skills and experimented with different flavors and cuisines, and I'm
+                excited to showcase some of my favorite recipes through Bacchus
+                Bites! Whether you're an experienced cook or a beginner, my hope is
+                that you'll find something new and exciting to try. I'm excited to
+                share my passion for cooking with you through this app, and I hope
+                that you'll find it to be a valuable resource in your own culinary
+                journey. Thanks for stopping by!
+            </p>
+            </div>
+        </div>
 
 
 
@@ -79,12 +167,13 @@ function About() {
                                     style={{ marginBottom: '1rem' }}
                                 />
                             </Form.Field>
-                            <Form.Button type="submit" style={{ backgroundColor: '#ff6b6b', color: '#fff', fontWeight: 'bold', padding: '0.8rem 2rem', borderRadius: '0.5rem', marginTop: '1rem' }}>Subscribe Now</Form.Button>
+                            <Form.Button type="submit" style={{ backgroundColor: 'black', color: 'white', fontWeight: 'bold', padding: '0.8rem 2rem', borderRadius: '0.5rem', marginTop: '1rem' }}>Subscribe Now</Form.Button>
                         </Form>
                     </div>
                 </div>
-            </div>
     );
 }
 
 export default About;
+
+

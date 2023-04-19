@@ -29,7 +29,6 @@ function IngredientPage({ ingredients }) {
     };
 
     const handleSubmit = () => {
-        console.log(newIngredient)
         fetch(`/ingredients`, {
             method: "POST",
             headers: {
@@ -52,7 +51,7 @@ function IngredientPage({ ingredients }) {
         Array.isArray(ingredients) &&
         ingredients.map((ingredient) => {
             return (
-                <Grid.Column key={ingredient.id} computer={4}>
+                <Grid.Column key={ingredient.id} computer={4} style={{ marginBottom: "1rem" }}>
                 <Ingredient
                     key={ingredient.id}
                     ingredientKey={ingredient.id}

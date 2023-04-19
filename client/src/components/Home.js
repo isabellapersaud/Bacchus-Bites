@@ -1,7 +1,7 @@
 import React from 'react';
 import PhotoSlide from './PhotoSlide';
 import PhotoSection from './PhotoSection';
-import YouTube from 'react-youtube';
+// import YouTube from 'react-youtube';
 import PhotoSlide2 from './PhotoSlide2';
 import EidFavorites from './EidFavorites'; 
 
@@ -54,9 +54,9 @@ function Home() {
             <br />
 
             <EidFavorites />
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
+            {/* <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '100vh' }}>
                 <YouTube videoId="zD-rWaMPosI" opts={opts} />
-            </div>
+            </div> */}
         </div>
     );
 }
