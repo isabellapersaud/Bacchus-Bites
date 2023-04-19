@@ -8,7 +8,7 @@ function RecipePage({ recipes }) {
         <div className="card-wrapper">
         {recipes.map((recipe) => (
             <Link to={`/recipes/${recipe.id}`} key={recipe.id} className="link">
-            <Card className="card" id={`recipe-card-${recipe.id}`}> 
+            <Card className="recipe-card" id={`recipe-card-${recipe.id}`}> 
                 <Image src={recipe.image} alt={recipe.title} className="image" />
                 <Card.Content className="content">
                 <Card.Header
