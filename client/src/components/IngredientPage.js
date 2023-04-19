@@ -51,7 +51,7 @@ function IngredientPage({ ingredients }) {
         Array.isArray(ingredients) &&
         ingredients.map((ingredient) => {
             return (
-                <Grid.Column key={ingredient.id} computer={4} style={{ marginBottom: "1rem" }}>
+                <Grid.Column key={ingredient.id} computer={4} style={{ marginBottom: "2rem" }}>
                 <Ingredient
                     key={ingredient.id}
                     ingredientKey={ingredient.id}

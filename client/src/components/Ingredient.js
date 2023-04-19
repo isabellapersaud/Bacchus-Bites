@@ -24,7 +24,7 @@ function Ingredient({ ingredientKey, name, image, addToGroceryList, onDelete }) 
                 <Button onClick={() => addToGroceryList({ id: ingredientKey, name, image })}>
                     Add to Grocery List
                 </Button>
-                <Button color="red" onClick={handleDeleteClick}>
+                <Button color="black" onClick={handleDeleteClick}>
                     Delete
                 </Button>
             </Card.Content>
