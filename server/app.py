@@ -192,6 +192,7 @@ class Ingredients(Resource):
     def post(self):        
         new_ingredient = Ingredient(
             name = request.get_json()['name'],
+            image = request.get_json()['image'],
 
         )
         db.session.add(new_ingredient)

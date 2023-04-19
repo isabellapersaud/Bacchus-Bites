@@ -12,9 +12,8 @@ function IngredientPage({ ingredients }) {
     };
 
     const handleInputChange = (e) => {
-        setNewIngredient({ ...newIngredient, [e.target.name]: e.target.value });
+        setNewIngredient({ ...newIngredient, [e.target.name]: e.target.value, [e.target.image]: e.target.value});
     };
-    
 
 
     const handleDelete = (ingredient) => {
@@ -30,6 +29,7 @@ function IngredientPage({ ingredients }) {
     };
 
     const handleSubmit = () => {
+        console.log(newIngredient)
         fetch(`/ingredients`, {
             method: "POST",
             headers: {
@@ -44,7 +44,6 @@ function IngredientPage({ ingredients }) {
             })
             .catch((error) => console.error("Error creating ingredient:", error));
     };
-
 
 
 

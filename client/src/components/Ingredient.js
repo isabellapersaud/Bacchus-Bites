@@ -1,10 +1,11 @@
 import React from "react";
 import { Card, Button } from "semantic-ui-react";
 
-function Ingredient({ ingredientKey, name, addToGroceryList, onDelete, image }) {
+function Ingredient({ ingredientKey, name, image, addToGroceryList, onDelete }) {
     const handleIngredientClick = () => {
         addToGroceryList({ id: ingredientKey, name , image});
     };
+
 
     const handleDeleteClick = (event) => {
         event.stopPropagation();
