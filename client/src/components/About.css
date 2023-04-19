@@ -1,0 +1,46 @@
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.subscribe-form label {
+    font-family: 'Playfair Display', serif; 
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.subscribe-form input[type="text"],
+.subscribe-form input[type="email"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif; 
+    font-size: 16px;
+    outline: none;
+}
+
+.subscribe-form input[type="submit"] {
+    background-color: #f67e7d;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Playfair Display', serif; 
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.subscribe-form input[type="submit"]:hover {
+    background-color: #f54746;
+}
+
+#intro-section {
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;
+}

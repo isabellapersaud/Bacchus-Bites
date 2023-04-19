@@ -69,6 +69,7 @@ function IngredientPage({ ingredients }) {
 
     return (
         <div>
+            <br />
             <h2 style={{ textAlign: "left", fontFamily: 'Playfair Display'}}>Grocery List</h2>
             <ul>
                 {groceryList.map((ingredient, index) => (
