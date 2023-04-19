@@ -4,7 +4,7 @@ import { Card, Form, Button, Grid } from "semantic-ui-react";
 
 function IngredientPage({ ingredients }) {
     const [groceryList, setGroceryList] = useState([]);
-    const [newIngredient, setNewIngredient] = useState({ name: "" });
+    const [newIngredient, setNewIngredient] = useState({ name: "", image: "" });
 
 
     const addToGroceryList = (ingredient) => {
@@ -15,7 +15,6 @@ function IngredientPage({ ingredients }) {
         setNewIngredient({ ...newIngredient, [e.target.name]: e.target.value });
     };
     
-
 
 
     const handleDelete = (ingredient) => {
@@ -41,7 +40,7 @@ function IngredientPage({ ingredients }) {
             .then((response) => response.json())
             .then((ingredient) => {
                 addToGroceryList(ingredient);
-                setNewIngredient({ name: "" });
+                setNewIngredient({ name: "", image: "" });
             })
             .catch((error) => console.error("Error creating ingredient:", error));
     };
@@ -66,7 +65,6 @@ function IngredientPage({ ingredients }) {
                 </Grid.Column>
             );
         });
-
     return (
         <div>
             <br />
@@ -86,13 +84,14 @@ function IngredientPage({ ingredients }) {
                     onChange={handleInputChange}
                     style={{ width: "200px" }} // Set the width using inline styles
             />
-                {/* <Form.Input
+                <Form.Input
                     label="Image URL"
                     type="url" // Set the type to "url"
                     name="image"
                     value={newIngredient.image} // Use the appropriate value and onChange function
                     onChange={handleInputChange}
-                /> */}
+                    style={{ width: "200px" }}
+                />
             <Button onClick={handleSubmit}>Submit</Button>
             </Form>
             <Grid columns={4} >
@@ -100,8 +99,8 @@ function IngredientPage({ ingredients }) {
             </Grid>
         </div>
     );
+
 }
 
 export default IngredientPage;
-
 
