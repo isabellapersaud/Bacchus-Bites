@@ -3,6 +3,9 @@ import PhotoSlide from './PhotoSlide';
 import PhotoSection from './PhotoSection';
 import YouTube from 'react-youtube';
 import PhotoSlide2 from './PhotoSlide2';
+import EidFavorites from './EidFavorites'; 
+
+
 
 function Home() {
 
@@ -26,7 +29,8 @@ function Home() {
                         maxWidth: '100px',
                         maxHeight: '100px',
                         marginRight: '50px',
-                    }}
+                        
+                    }} 
                 />
                 <p
                     style={{
@@ -48,6 +52,7 @@ function Home() {
                 </p>
                 <YouTube videoId="zD-rWaMPosI" opts={opts} />
             </div>
+            <EidFavorites />
 
         </div>
     );

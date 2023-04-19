@@ -7,7 +7,8 @@ const PhotoSlide2 = () => {
             id : 1,
         },
         {
-            imageUrl: 'https://i.pinimg.com/564x/18/f2/bc/18f2bc33e7220eab1faf71a78c09e45b.jpg'
+            imageUrl: 'https://i.pinimg.com/564x/18/f2/bc/18f2bc33e7220eab1faf71a78c09e45b.jpg',
+            id : 2,
         },
         {
             imageUrl: 'https://i.pinimg.com/564x/fc/f2/2a/fcf22a5d4249c0fa4508d3d09fbddf19.jpg',
