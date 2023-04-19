@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import Recipe from "./Recipe";
 import "./RecipeDetailsPage.css"
+import styled from "styled-components";
+
 
 
 function RecipeDetailsPage({ recipes }) {
@@ -90,7 +92,7 @@ function RecipeDetailsPage({ recipes }) {
             <button onClick={handleAddLike}  style={{ display: "block", margin: "auto", textAlign: "center", fontSize: "20px", fontFamily: 'Playfair Display'}}>
                 Likes: {recipeLikes}</button>
             <h3>{recipe.name}</h3>
-            <h1 style= {{fontWeight: 'bold',fontFamily:'Tangerine,fontSize', fontSize:'50px',  textAlign: "center", letterSpacing: '0.5em'}}>Ingredients:</h1>
+            <h1 style= {{fontWeight: 'bold',fontFamily:'Tangerine', fontSize:'50px',  textAlign: "center", letterSpacing: '0.5em'}}>Ingredients:</h1>
             <ul style= {{fontFamily: 'Playfair Display ',fontSize: '20px',  textAlign: "center"}}>{recipe.ingredients}</ul>
             <h1 style= {{fontWeight: 'bold',fontFamily:'Tangerine,fontSize',fontSize: '50px',  textAlign: "center", letterSpacing: '0.5em'}}>Instructions:</h1>
             <h4 style = {{fontSize: '20px', fontFamily: 'Playfair Display', }}>{recipe.instructions}</h4>

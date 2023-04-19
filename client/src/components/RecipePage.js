@@ -2,6 +2,9 @@ import React from "react";
 import { Card, Image } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import "./RecipePage.css";
+import styled from "styled-components";
+
+
 
 function RecipePage({ recipes }) {
 

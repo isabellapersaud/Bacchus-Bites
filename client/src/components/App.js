@@ -90,7 +90,7 @@ function filterCategory() {
     <div className= "App">
       <Header user = {user} setUser = {setUser}  onLogout = {onLogout}/>   
       <SearchBar search={search} handleSearch={handleSearch} setSearch = {setSearch} />
-      <Filter handleCategory={handleCategory} />  
+      <Filter handleCategory={handleCategory} /> 
       <br />
         <Switch>
           <Route exact path="/about"> 
@@ -111,7 +111,7 @@ function filterCategory() {
           </Route> 
         </Switch>
       </div>
-  )
+  );
 
 }
 
