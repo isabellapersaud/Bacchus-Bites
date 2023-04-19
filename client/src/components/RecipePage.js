@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import "./RecipePage.css";
 
 function RecipePage({ recipes }) {
+
+
     return (
         <div className="card-wrapper">
         {recipes.map((recipe) => (

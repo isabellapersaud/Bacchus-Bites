@@ -6,7 +6,7 @@ import './EidFavorites.css';
 const EidFavorites = () => {
     return (
         <div>
-            <h2 style={{ textAlign: 'center', fontFamily:'Tangerine', fontSize: '50px', fontWeight: 'bold'}}>
+            <h2 style={{ textAlign: 'center', fontFamily:'Tangerine', fontSize: '50px', fontWeight: 'bold', letterSpacing: "0.5em"}}>
                 Eid Favorites!
             </h2>
             <div className="photo-grid">

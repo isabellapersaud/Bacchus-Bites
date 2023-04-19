@@ -116,5 +116,3 @@ function filterCategory() {
 }
 
 export default App;
-
-//  <div className={`background ${theme} App`}> */

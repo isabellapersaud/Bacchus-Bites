@@ -4,13 +4,13 @@ function Filter({ handleCategory }) {
     const categories = ['All', 'Breakfast', 'Lunch', 'Dinner', 'Dessert'];
 
     return (
-        <div
-            style={{
-                margin: '10px 0 10px auto',
-                padding: '10px',
-                borderRadius: '5px',
-            }}
-        >
+            <div
+                style={{
+                borderRadius: '4px',
+                display: 'inline-block',
+                float: 'left',
+                }}
+            >
             <h2>
                 <select
                     style={{
